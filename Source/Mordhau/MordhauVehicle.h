@@ -106,7 +106,14 @@ UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	float                                              MinXYDistanceToEnter;
 UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	struct FVector2D                                   MinZDistanceToEnter;
-
+UPROPERTY(EditAnywhere, BlueprintReadWrite)
+FText VehicleName;
+UPROPERTY(EditAnywhere, BlueprintReadWrite)
+FName AttachSocketName;
+UPROPERTY(EditAnywhere, BlueprintReadWrite)
+FTransform AttachSocketOffset;
+UPROPERTY(EditAnywhere, BlueprintReadWrite)
+FName DetachSocketName;
 
 
 

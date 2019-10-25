@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "AdvancedCharacterAnimInstance.h"
+#include "Mordhau.h"
 #include "CreatureAnimInstance.generated.h"
 
 /**
@@ -16,7 +17,7 @@ class MORDHAU_API UCreatureAnimInstance : public UAdvancedCharacterAnimInstance
 	
 	
 public:
-	//TArray<struct FFootGroundingLimb>                  GroundingLimbs;
+	TArray<struct FFootGroundingLimb>                  GroundingLimbs;
 UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	bool                                               bComputeGroundingRotation;
 UPROPERTY(EditAnywhere, BlueprintReadWrite)

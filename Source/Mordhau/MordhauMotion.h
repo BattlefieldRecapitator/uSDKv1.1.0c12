@@ -36,8 +36,8 @@ public:
 	float                                              ConfirmedByAuthorityTime;
 	UPROPERTY(Replicated, EditAnywhere, BlueprintReadWrite)
 	bool                                               bIsFlinchable;
-	//UPROPERTY(Replicated, EditAnywhere, BlueprintReadWrite)
-	//EMovementRestriction                               MovementRestriction;
+	UPROPERTY(Replicated, EditAnywhere, BlueprintReadWrite)
+	EMovementRestriction                               MovementRestriction;
 	UPROPERTY(Replicated, EditAnywhere, BlueprintReadWrite)
 	float                                              SpeedFactor;
 	UPROPERTY(Replicated, EditAnywhere, BlueprintReadWrite)

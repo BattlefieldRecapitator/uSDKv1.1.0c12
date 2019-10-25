@@ -169,6 +169,7 @@ UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Geometric")
 UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Geometric")
 	struct FVector2D                                   ChamberedRecoveryTimeLimits;
 
+
 	
 	
 };

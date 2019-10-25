@@ -869,7 +869,33 @@ UPROPERTY(Replicated, EditAnywhere, BlueprintReadWrite)
 	bool                                               bRevertModeOnUnequip;
 
  UPROPERTY(Replicated, EditAnywhere, BlueprintReadWrite)
+	 UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	bool                                               bRevertModeOnDrop;
+ UPROPERTY(EditAnywhere, BlueprintReadWrite)
+ uint8                                      ReplicatedColors;
+ UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	 uint8                                      ReplicatedPartsId;
+ UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	 uint8                                      ReplicatedSkin;
+ UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	 uint8                                      ReplicatedEmblem;
+ UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	 uint8                                      ReplicatedEmblemColors;
+ UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	 uint8                                      ReplicatedPattern;
+ UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	 bool                                               bHasReplicatedColors;
+ UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	 bool                                               bHasReplicatedPartsId;
+ UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	 bool                                               bHasReplicatedSkin;
+ UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	 bool                                               bHasReplicatedEmblem;
+ UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	 bool                                               bHasReplicatedEmblemColors;
+ UPROPERTY(EditAnywhere, BlueprintReadWrite)
+ bool                                               bHasReplicatedPattern;
+
 
 
  UFUNCTION(BlueprintCallable, Category = "MordhauEquipmentFns")

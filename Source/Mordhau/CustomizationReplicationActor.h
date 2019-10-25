@@ -32,27 +32,27 @@ class USkeletalMesh*                               Cached1PDeadMesh;
 class USkeletalMesh*                               CachedUnifiedMesh;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 
-		struct FRepArrayShortWithVersion                    FaceBonesTranslate;
+		struct FRepArrayShortWithVersion                    ReplicatedFaceBonesTranslate;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-struct FRepArrayShortWithVersion                    FaceBonesRotate;
+struct FRepArrayShortWithVersion                    ReplicatedFaceBonesRotate;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-struct FRepArrayShortWithVersion                    FaceBonesScale;
+struct FRepArrayShortWithVersion                    ReplicatedFaceBonesScale;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-struct FRepArrayAppearanceWithVersion               AppearanceCustomization;
+struct FRepArrayAppearanceWithVersion               ReplicatedAppearanceCustomization;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-struct FRepArraySkillsWithVersion                   SkillsCustomization;
+struct FRepArraySkillsWithVersion                   ReplicatedSkillsCustomization;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-struct FRepArrayByteWithVersion                     DefaultEquipmentId;
+struct FRepArrayByteWithVersion                     ReplicatedDefaultEquipmentId;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 TArray<class UClass*>                              DefaultEquipment;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-struct FRepArrayByteWithVersion                     WearableId;
+struct FRepArrayByteWithVersion                     ReplicatedWearableId;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-struct FRepArrayByteWithVersion                     WearableColor1;
+struct FRepArrayByteWithVersion                     ReplicatedWearableColor1;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-struct FRepArrayByteWithVersion                     WearableColor2;
+struct FRepArrayByteWithVersion                     ReplicatedWearableColor2;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-struct FRepArrayByteWithVersion                     WearablePattern;
+struct FRepArrayByteWithVersion                     ReplicatedWearablePattern;
 
 UFUNCTION(BlueprintCallable, Category = "CustomizationRepFns")
 void UpdateCharacterProfile(class AMordhauCharacter* Character);
@@ -63,25 +63,25 @@ void TriggerUpdateIfUpToDate();
 UFUNCTION(BlueprintCallable, Category = "CustomizationRepFns")
 void RegisterCharacter(class AMordhauCharacter* Character);
 UFUNCTION(BlueprintNativeEvent, Category = "CustomizationRepFns")
-void OnRep_WearablePattern();
+void OnRep_ReplicatedWearablePattern();
 UFUNCTION(BlueprintNativeEvent, Category = "CustomizationRepFns")
-void OnRep_WearableId();
+void OnRep_ReplicatedWearableId();
 UFUNCTION(BlueprintNativeEvent, Category = "CustomizationRepFns")
-void OnRep_WearableColor2();
+void OnRep_ReplicatedWearableColor2();
 UFUNCTION(BlueprintNativeEvent, Category = "CustomizationRepFns")
-void OnRep_WearableColor1();
+void OnRep_ReplicatedWearableColor1();
 UFUNCTION(BlueprintNativeEvent, Category = "CustomizationRepFns")
-void OnRep_SkillsCustomization();
+void OnRep_ReplicatedSkillsCustomization();
 UFUNCTION(BlueprintNativeEvent, Category = "CustomizationRepFns")
-void OnRep_FaceBonesTranslate();
+void OnRep_ReplicatedFaceBonesTranslate();
 UFUNCTION(BlueprintNativeEvent, Category = "CustomizationRepFns")
-void OnRep_FaceBonesScale();
+void OnRep_ReplicatedFaceBonesScale();
 UFUNCTION(BlueprintNativeEvent, Category = "CustomizationRepFns")
-void OnRep_FaceBonesRotate();
+void OnRep_ReplicatedFaceBonesRotate();
 UFUNCTION(BlueprintNativeEvent, Category = "CustomizationRepFns")
-void OnRep_DefaultEquipmentId();
+void OnRep_ReplicatedDefaultEquipmentId();
 UFUNCTION(BlueprintNativeEvent, Category = "CustomizationRepFns")
-void OnRep_AppearanceCustomization();
+void OnRep_ReplicatedAppearanceCustomization();
 UFUNCTION(BlueprintCallable, Category = "CustomizationRepFns")
 bool IsUpToDate();
 UFUNCTION(BlueprintCallable, Category = "CustomizationRepFns")

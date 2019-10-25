@@ -42,6 +42,8 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	uint8                                      Thud;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		uint8                                      ReplicatedThud;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	class USoundCue*                                   ThudSound;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	struct FVector2D                                   ThudPitchMultiplierRange;
@@ -111,6 +113,10 @@ public:
 	float                                              MaxInteractionHoldTime;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	float                                              LastLocallyRequestedPassiveInteractionTime;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		bool TeamKillsCountForAutoKick;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		bool bShouldReplicateThud;
 
 	UFUNCTION(BlueprintCallable, Category = "MordhauActorFns")
 	void UpdateThudVelocity(float NewThudVelocity);
@@ -122,6 +128,8 @@ public:
 		void OnUsedToKillOther(class AAdvancedCharacter* Character, EMordhauDamageType Type, uint8 SubType, const FName& bone, const struct FVector& Point, class AActor* Source);
 	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable, Category = "MordhauActorEvents")
 		void OnThud();
+	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable, Category = "MordhauActorEvents")
+		void OnRep_ReplicatedThud();
 	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable, Category = "MordhauActorEvents")
 		void OnReceiveCosmeticHit(class AActor* Source, class AActor* Agent, EAttackMove Move, const struct FHitResult& Hit);
 	UFUNCTION(BlueprintImplementableEvent, Category = "MordhauActorEvents")
